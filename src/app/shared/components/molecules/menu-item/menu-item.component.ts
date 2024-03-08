@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IconNames } from 'src/app/enums/icons';
 
 @Component({
   selector: 'app-menu-item',
@@ -9,4 +10,5 @@ export class MenuItemComponent {
   @Input() route: string = '';
   @Input() className: string = '';
   @Input() label: string = '';
+  @Input() icon: IconNames = IconNames.faBars;
 }
