@@ -8,4 +8,8 @@ import { IconNames } from 'src/app/enums/icons';
 })
 export class NavbarComponent {
   public IconNamesEnum = IconNames;
+
+  openMenu = () => {
+    console.log('Coming from openMenu');
+  };
 }

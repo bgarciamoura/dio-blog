@@ -11,4 +11,9 @@ export class MenuItemComponent {
   @Input() className: string = '';
   @Input() label: string = '';
   @Input() icon: IconNames = IconNames.faBars;
+  @Input() onClick: Function = () => {};
+
+  handleClick() {
+    this.onClick();
+  }
 }

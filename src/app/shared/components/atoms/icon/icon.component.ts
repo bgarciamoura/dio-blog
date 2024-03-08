@@ -1,5 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
+import {
+  IconName,
+  IconPrefix,
+  SizeProp,
+} from '@fortawesome/fontawesome-svg-core';
 import { IconNames } from 'src/app/enums/icons';
 
 @Component({
@@ -9,6 +13,7 @@ import { IconNames } from 'src/app/enums/icons';
 })
 export class IconComponent {
   @Input() icon: IconNames = IconNames.faBars;
+  @Input() iconSize: SizeProp = 'sm';
 
   public getIcons(): [IconPrefix, IconName] {
     return ['fas', this.icon as IconName];
