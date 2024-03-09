@@ -8,11 +8,28 @@
   position: absolute;
   z-index: 10;
   background: rgb(255, 255, 255);
-
   margin-left: -300px;
+  transition:
+    margin-left 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 
   &.active {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
     margin-left: 0;
+  }
+
+  app-menu-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 8px 4px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  @media (max-width: 425px) {
+    max-width: 100%;
+    margin-left: -100%;
   }
 }

@@ -1,3 +1,8 @@
 fa-icon {
   color: #030303;
+  transition: color 0.3s ease-in-out;
+
+  &.active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
