@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuService } from 'src/app/core/services/menu.service';
 import { IconNames } from 'src/app/enums/icons';
 
 @Component({
@@ -9,7 +10,9 @@ import { IconNames } from 'src/app/enums/icons';
 export class NavbarComponent {
   public IconNamesEnum = IconNames;
 
+  constructor(private menuService: MenuService) {}
+
   openMenu = () => {
-    console.log('Coming from openMenu');
+    this.menuService.toggleMenu();
   };
 }
