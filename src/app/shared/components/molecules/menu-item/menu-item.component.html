@@ -1,4 +1,4 @@
 <a [className]="className" [routerLink]="route" (click)="handleClick()">
   {{ label }}
-  <app-icon [icon]="icon" [iconSize]="'lg'"></app-icon>
+  <app-icon *ngIf="icon" [icon]="icon" [iconSize]="'lg'"></app-icon>
 </a>

@@ -10,7 +10,7 @@ export class MenuItemComponent {
   @Input() route: string = '';
   @Input() className: string = '';
   @Input() label: string = '';
-  @Input() icon: IconNames = IconNames.faBars;
+  @Input() icon: IconNames | undefined;
   @Input() onClick: Function = () => {};
 
   handleClick() {
